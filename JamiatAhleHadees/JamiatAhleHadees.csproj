@@ -129,6 +129,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\BoardMember\BoardMemberAreaRegistration.cs" />
     <Compile Include="Areas\Panel\PanelAreaRegistration.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
@@ -156,9 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\User\" />
     <Folder Include="Areas\BoardMember\Controllers\" />
     <Folder Include="Areas\BoardMember\Models\" />
     <Folder Include="Areas\BoardMember\Views\Shared\" />
