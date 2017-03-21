@@ -1059,6 +1059,7 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\BoardMember\BoardMemberAreaRegistration.cs" />
     <Compile Include="Areas\Panel\PanelAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\MasjidController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1199,6 +1200,8 @@
     <Content Include="Assets\plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="Assets\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Assets\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="Areas\User\Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Areas\User\Views\Masjid\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1217,9 +1220,7 @@
     <Folder Include="Areas\Panel\Controllers\" />
     <Folder Include="Areas\Panel\Models\" />
     <Folder Include="Areas\Panel\Views\Shared\" />
-    <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
-    <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
