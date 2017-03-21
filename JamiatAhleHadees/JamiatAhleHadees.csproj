@@ -1059,7 +1059,14 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\BoardMember\BoardMemberAreaRegistration.cs" />
     <Compile Include="Areas\Panel\PanelAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\BoardRequestProcessController.cs" />
+    <Compile Include="Areas\User\Controllers\EventRequestController.cs" />
+    <Compile Include="Areas\User\Controllers\ExistingMadarsaOperaionController.cs" />
     <Compile Include="Areas\User\Controllers\MasjidController.cs" />
+    <Compile Include="Areas\User\Controllers\MasjidExtensionController.cs" />
+    <Compile Include="Areas\User\Controllers\MasjidRenovationController.cs" />
+    <Compile Include="Areas\User\Controllers\NewMadarsaOperationsController.cs" />
+    <Compile Include="Areas\User\Controllers\PanelmemberRquestProcessController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1202,6 +1209,13 @@
     <Content Include="Assets\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="Areas\User\Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Areas\User\Views\Masjid\Index.cshtml" />
+    <Content Include="Areas\User\Views\MasjidExtension\Index.cshtml" />
+    <Content Include="Areas\User\Views\MasjidRenovation\Index.cshtml" />
+    <Content Include="Areas\User\Views\NewMadarsaOperations\Index.cshtml" />
+    <Content Include="Areas\User\Views\ExistingMadarsaOperaion\Index.cshtml" />
+    <Content Include="Areas\User\Views\EventRequest\Index.cshtml" />
+    <Content Include="Areas\User\Views\BoardRequestProcess\Index.cshtml" />
+    <Content Include="Areas\User\Views\PanelmemberRquestProcess\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
