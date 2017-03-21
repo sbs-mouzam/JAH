@@ -1059,14 +1059,23 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\BoardMember\BoardMemberAreaRegistration.cs" />
     <Compile Include="Areas\Panel\PanelAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\BoardMemberController.cs" />
     <Compile Include="Areas\User\Controllers\BoardRequestProcessController.cs" />
     <Compile Include="Areas\User\Controllers\EventRequestController.cs" />
     <Compile Include="Areas\User\Controllers\ExistingMadarsaOperaionController.cs" />
+    <Compile Include="Areas\User\Controllers\MadarsaController.cs" />
+    <Compile Include="Areas\User\Controllers\MadarsaExtenstionController.cs" />
+    <Compile Include="Areas\User\Controllers\MadarsaLandRequestController.cs" />
+    <Compile Include="Areas\User\Controllers\MasjidConstructionController.cs" />
     <Compile Include="Areas\User\Controllers\MasjidController.cs" />
     <Compile Include="Areas\User\Controllers\MasjidExtensionController.cs" />
+    <Compile Include="Areas\User\Controllers\MasjidLandRequestController.cs" />
     <Compile Include="Areas\User\Controllers\MasjidRenovationController.cs" />
     <Compile Include="Areas\User\Controllers\NewMadarsaOperationsController.cs" />
+    <Compile Include="Areas\User\Controllers\PanelMemberController.cs" />
     <Compile Include="Areas\User\Controllers\PanelmemberRquestProcessController.cs" />
+    <Compile Include="Areas\User\Controllers\RequestSubmitController.cs" />
+    <Compile Include="Areas\User\Controllers\UserController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1216,6 +1225,15 @@
     <Content Include="Areas\User\Views\EventRequest\Index.cshtml" />
     <Content Include="Areas\User\Views\BoardRequestProcess\Index.cshtml" />
     <Content Include="Areas\User\Views\PanelmemberRquestProcess\Index.cshtml" />
+    <Content Include="Areas\User\Views\BoardMember\Index.cshtml" />
+    <Content Include="Areas\User\Views\MadarsaExtenstion\Index.cshtml" />
+    <Content Include="Areas\User\Views\MadarsaLandRequest\Index.cshtml" />
+    <Content Include="Areas\User\Views\Madarsa\Index.cshtml" />
+    <Content Include="Areas\User\Views\MasjidConstruction\Index.cshtml" />
+    <Content Include="Areas\User\Views\MasjidLandRequest\Index.cshtml" />
+    <Content Include="Areas\User\Views\PanelMember\Index.cshtml" />
+    <Content Include="Areas\User\Views\RequestSubmit\Index.cshtml" />
+    <Content Include="Areas\User\Views\User\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
