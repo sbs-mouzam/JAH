@@ -1062,7 +1062,7 @@
     <Compile Include="Areas\User\Controllers\BoardMemberController.cs" />
     <Compile Include="Areas\User\Controllers\BoardRequestProcessController.cs" />
     <Compile Include="Areas\User\Controllers\EventRequestController.cs" />
-    <Compile Include="Areas\User\Controllers\ExistingMadarsaOperaionController.cs" />
+    <Compile Include="Areas\User\Controllers\ExistingMadarsaOperationController.cs" />
     <Compile Include="Areas\User\Controllers\MadarsaController.cs" />
     <Compile Include="Areas\User\Controllers\MadarsaExtenstionController.cs" />
     <Compile Include="Areas\User\Controllers\MadarsaLandRequestController.cs" />
@@ -1221,7 +1221,6 @@
     <Content Include="Areas\User\Views\MasjidExtension\Index.cshtml" />
     <Content Include="Areas\User\Views\MasjidRenovation\Index.cshtml" />
     <Content Include="Areas\User\Views\NewMadarsaOperations\Index.cshtml" />
-    <Content Include="Areas\User\Views\ExistingMadarsaOperaion\Index.cshtml" />
     <Content Include="Areas\User\Views\EventRequest\Index.cshtml" />
     <Content Include="Areas\User\Views\BoardRequestProcess\Index.cshtml" />
     <Content Include="Areas\User\Views\PanelmemberRquestProcess\Index.cshtml" />
@@ -1234,6 +1233,7 @@
     <Content Include="Areas\User\Views\PanelMember\Index.cshtml" />
     <Content Include="Areas\User\Views\RequestSubmit\Index.cshtml" />
     <Content Include="Areas\User\Views\User\Index.cshtml" />
+    <Content Include="Areas\User\Views\ExistingMadarsaOperation\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

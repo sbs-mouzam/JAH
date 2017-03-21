@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace JamiatAhleHadees.Areas.User.Controllers
 {
-    public class ExistingMadarsaOperaionController : Controller
+    public class ExistingMadarsaOperationController : Controller
     {
         // GET: User/ExistingMadarsaOperaion
         public ActionResult Index()
