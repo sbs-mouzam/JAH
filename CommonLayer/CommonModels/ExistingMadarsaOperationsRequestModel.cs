@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class NewMadarsaOperationsRequest
+    public partial class ExistingMadarsaOperationsRequestModel
     {
         public int Id { get; set; }
 
@@ -24,7 +24,6 @@ namespace CommonLayer.CommonModels
 
         public string MadarsaName { get; set; }
 
-        public string ExpectedStudents { get; set; }
 
         public string Girls { get; set; }
 
@@ -68,18 +67,15 @@ namespace CommonLayer.CommonModels
 
         public DateTime? CreatedDate { get; set; }
 
-        public int? RequestTypeId { get; set; }
-
-        public List <RequestSubmit> RequestSubmitList { get; set; }
-
-        public List <RequestType> RequestTypeList { get; set; }
-
-        public List<User> UserList { get; set; }
-
-        public List<Madarsa> MadarsaList { get; set; }
+        public int? RequestType { get; set; }
 
 
-        public List<NewMadarsaOperationsRequest> NewMadarsaOperationsRequestList { get; set; }
-        
+        public List<MadarsaModel> MadarsaList { get; set; }
+
+        public List<RequestSubmitModel> RequestSubmitList { get; set; }
+        public List<RequestTypeModel> RequestTypeList { get; set; }
+        public List<UserModel> UserList { get; set; }
+
+        public List<ExistingMadarsaOperationsRequestModel> ExistingMadarsaOperationsRequestList { get; set; }
     }
 }

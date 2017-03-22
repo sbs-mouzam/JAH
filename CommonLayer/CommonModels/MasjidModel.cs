@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class Masjid
+    public partial class MasjidModel
     {
+        private MasjidModel model;
+
+        public MasjidModel()
+        {
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -24,15 +30,15 @@ namespace CommonLayer.CommonModels
 
 
         public string Mobile { get; set; }
-            
+
         public DateTime? CreatedDate { get; set; }
 
         public int? CreatedBy { get; set; }
 
 
-        public List<Masjid> MasjidList { get; set; }
-        public List<User> UserList { get; set; }
-        public List<Zone> ZoneList { get; set; }
+        public List<MasjidModel> MasjidList { get; set; }
+        public List<UserModel> UserList { get; set; }
+        public List<ZoneModel> ZoneList { get; set; }
 
     }
 }

@@ -7,20 +7,22 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Interface
 {
-    public interface IMasjidBs
+    public interface IMasjid
     {
-        List<Masjid> MasjidList();
 
+        List<MasjidModel> MasjidList();
 
-        List<User> UserList();
+        List<ZoneModel> ZoneList();
 
-        Masjid GetDetails(Masjid model);
+        List<UserModel> UserList();
 
-        int Save(Masjid model);
+        MasjidModel GetDetails(MasjidModel model);
 
-        Masjid GetById(int id);
+        int Save(MasjidModel model);
 
-        void Delete(Masjid entity);
+        MasjidModel GetById(int id);
+
+        //void Delete(Masjid entity);
 
     }
 }

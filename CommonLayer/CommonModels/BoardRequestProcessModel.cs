@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-   public partial class BoardRequestProcess
+   public partial class BoardRequestProcessModel
     {
 
         public int Id { get; set; }
@@ -27,9 +27,9 @@ namespace CommonLayer.CommonModels
         public string Status { get; set; }
 
 
-        public List<RequestSubmit> RequestSubmitList { get; set; }
+        public List<RequestSubmitModel> RequestSubmitList { get; set; }
 
 
-        public List<BoardRequestProcess> BoardRequestProcessList { get; set; }
+        public List<BoardRequestProcessModel> BoardRequestProcessList { get; set; }
     }
 }

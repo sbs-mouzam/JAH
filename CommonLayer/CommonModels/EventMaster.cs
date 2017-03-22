@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CommonLayer
 {
-    public partial class EventMaster
+    public partial class EventMasterModel
     {
 
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public List<EventMaster> EventMasterList { get; set; }
+        public List<EventMasterModel> EventMasterList { get; set; }
 
     }
 }

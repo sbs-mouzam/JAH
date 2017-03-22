@@ -1,0 +1,190 @@
+﻿@model CommonLayer.CommonModels.MasjidModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/User/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "Masjid", FormMethod.Post))
+{
+    <h2>Add Masjid</h2>
+
+    <form class="form-horizontal form-label-left">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-md-6portfolio-item">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="control-label col-lg-offset-2 col-lg-2 col-xs-12">
+                            Masjid Name
+                        </label>
+                        <div class="col-md-4 col-sm-4 col-xs-4 col-xs-12">
+                            <input type="text" id="MasjidName" value="@Model.Name" name="MasjidName" class="form-control" placeholder="MasjidName" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="control-label col-lg-offset-2 col-lg-2 col-xs-12">
+                            Location
+                        </label>
+                        <div class="col-md-4 col-sm-4 col-xs-4 col-xs-12">
+                            <input type="text" id="Location" value="@Model.Location" name="SadarUserId" class="form-control" placeholder="SadarUserName" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="control-label col-lg-offset-2 col-lg-2 col-xs-12">
+
+                            Head User Name
+                        </label>
+                        <div class="col-md-4 col-sm-4 col-xs-4 col-xs-12">
+                            @*<input type="hidden" id="hdnCategoryId" value="@(Model.ParentID)" />*@
+                            <select class="form-control select2 select2-hidden-accessible ddnHeadUserId" aria-hidden="true" name="HeaduserId">
+                                <option value="0">Head User Name</option>
+
+                                @if (Model.UserList != null)
+                                {
+                                    foreach (var item in Model.UserList)
+                                    {
+                                        string isSelected = string.Empty;
+                                        if (item.Id == Model.HeadUserId)
+                                        {
+                                            isSelected = "selected";
+                                        }
+                                        <option value="@item.Id" @isSelected>@item.UserName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-lg-offset-2 col-lg-2 col-xs-12">
+
+                        Zone Name
+                    </label>
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xs-12">
+                        @*<input type="hidden" id="hdnCategoryId" value="@(Model.ParentID)" />*@
+                        <select class="form-control select2 select2-hidden-accessible ddnHalqaId" aria-hidden="true" name="HalqaId">
+                            <option value="0">Zone Name</option>
+
+                            @if (Model.ZoneList != null)
+                            {
+                                foreach (var item in Model.ZoneList)
+                                {
+                                    string isSelected = string.Empty;
+                                    if (item.Id == Model.ZoneId)
+                                    {
+                                        isSelected = "selected";
+                                    }
+                                    <option value="@item.Id" @isSelected>@item.Name</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+
+              
+
+                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-lg-offset-2 col-lg-2 col-xs-12">
+                        Mobile
+                    </label>
+                    <div class="col-md-4 col-sm-4 col-xs-4 col-xs-12">
+                        <input type="text" id="Mobile" value="@Model.Mobile" name="Mobile" class="form-control" placeholder="Mobile" />
+                    </div>
+                </div>
+                
+                <input type="hidden" id="hdnId" value="@Model.Id" name="Id" />
+                <input type="hidden" id="hdnCreatedBy" value="@Model.CreatedBy" name="CreatedBy" />
+                <input typeof="date" type="hidden" id="hdnCreatedDate" value="@Model.CreatedDate" name="CreatedDate" />
+                <br />
+                <div class="col-md-offset-4 col-md-2 col-xs-12">
+                    @if (Model.Id != null && Model.Id != 0)
+                {
+                        <button type="submit" class="btn-block btn btn-success" data-id="@Model.Id" id="btnRegisterUpdate">
+                            Update
+                        </button>
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn-block btn btn-success" data-id="0" id="btnRegister">
+                            Register
+                        </button>
+                    }
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <button value="Edit"
+                            class="btn btn-block btn-danger" type="button" id="addressSearch"
+                            onclick="location.href='@Url.Action("Index", "Masjid")'">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+}
+
+@*<div class="row" id="ListMasjid">
+    @Html.Action("Index", "Masjid")
+</div>*@
+
+
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/toastr.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(document).on("click", "#btnRegister,#btnRegisterUpdate", function (e) {
+            var _CustomerModel = {
+                Id: $("#hdnId").val(),
+                MasjidName: $("#MasjidName").val(),
+                SadarUserName: $("#SadarUserName").val(),
+                HalqaId: $(".ddnHalqaId:Selected").val(),
+                Latitude: $("#Latitude").val(),
+                Longitude: $("#Longitude").val(),
+
+
+            };
+            buttonDisabledReg();
+            $.ajax({
+                url: "http://localhost:49248/Admin/AddMasjid/Create",
+                type: "POST",
+                data: _CustomerModel,
+                success: function (response) {
+                    $("#ListMasjid").empty().append(response);
+                    buttonEnableReg();
+                },
+                error: function (err) {
+                    toastr.error("Registration failed: Internal server error");
+                    buttonEnableReg();
+                    console.log(err);
+                }
+            });
+        });
+    });
+
+    function buttonEnableReg() {
+        $("#btnRegister span,#btnRegisterUpdate span").hide();
+        $("#btnRegister,#btnRegisterUpdate").prop("disabled", false);
+    }
+
+
+    //function buttonDisabledReg() {
+    //    $("#btnRegister span,#btnRegisterUpdate span").show();
+    //    $("#btnRegister,#btnRegisterUpdate").prop("disabled", true);
+    //}
+
+    function ClearFields() {
+        $(".RequiredTextField").each(function () {
+            $(this).val('');
+        });
+        $(".RequiredRadioField").each(function () {
+            $(this).prop('checked', false);
+        });
+        $("#txtGuarId,#txtId").val('0');
+    }
+</script>*@
+

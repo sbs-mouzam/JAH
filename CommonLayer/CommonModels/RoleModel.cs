@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class Halqa
+    public partial class RoleModel
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public DateTime? CreatedDate { get; set; }
+        public bool? Status { get; set; }
 
-        public List<Halqa> HalqaList { get; set; }
+        public List<RoleModel> RoleList { get; set; }
+
+
+
     }
 }

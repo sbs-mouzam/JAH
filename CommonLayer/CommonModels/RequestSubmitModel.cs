@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class RequestSubmit
+    public partial class RequestSubmitModel
     {
         public int Id { get; set; }
 
@@ -20,10 +20,10 @@ namespace CommonLayer.CommonModels
 
         public DateTime? RequestDate { get; set; }
 
-        public List<RequestType> RequestTypeList { get; set; }
+        public List<RequestTypeModel> RequestTypeList { get; set; }
 
 
-        public List<RequestSubmit> RequestSubmitList { get; set; }
+        public List<RequestSubmitModel> RequestSubmitList { get; set; }
 
     }
 }

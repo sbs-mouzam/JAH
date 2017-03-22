@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class MasjidExtensionRequest
+    public partial class MasjidConstructionRequestModel
     {
         public int Id { get; set; }
 
@@ -14,9 +14,8 @@ namespace CommonLayer.CommonModels
 
         public int? UserId { get; set; }
 
-        public string UsernName { get; set; }
-
-
+        public string UserName { get; set; }
+        
         public string Location { get; set; }
 
         public string Area { get; set; }
@@ -24,7 +23,6 @@ namespace CommonLayer.CommonModels
         public int? MasjidId { get; set; }
 
         public string MasjidName { get; set; }
-
 
         public string ConstructionCost { get; set; }
 
@@ -58,12 +56,13 @@ namespace CommonLayer.CommonModels
 
         public int? RequestTypeId { get; set; }
 
-        public List <RequestSubmit> RequestSubmitList { get; set; }
+        public List <UserModel> UserList { get; set; }
 
-        public List<RequestType> RequestTypeList { get; set; }
+        public List <RequestSubmitModel> RequestSubmitList { get; set; }
+        public List<MasjidModel> MasjidList { get; set; }
 
-        public List<Masjid> MasjidList { get; set; }
+        public List<RequestTypeModel> RequestTypeList { get; set; }
 
-        public List <User> UserList { get; set; }
+        public List<MasjidConstructionRequestModel> MasjidConstructionRequestList { get; set; }
     }
 }

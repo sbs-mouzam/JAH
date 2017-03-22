@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class RequestApprove
+    public partial class PanelInvolvementModel
     {
-
         public int Id { get; set; }
 
         public int? RequestSubmitId { get; set; }
@@ -20,18 +19,19 @@ namespace CommonLayer.CommonModels
 
         public int? UserTypeId { get; set; }
 
-        public bool IsApproved { get; set; }
+        public bool IsObject{ get; set; }
 
         public DateTime CreatedDate { get; set; }
 
 
-        public List<User> UserList { get; set; }
-        public List<UserType> UserTypeList { get; set; }
+        public List<UserModel> UserList { get; set; }
+        public List<UserTypeModel> UserTypeList { get; set; }
 
-        public List<RequestSubmit> RequestSubmitList { get; set; }
+        public List<RequestSubmitModel> RequestSubmitList { get; set; }
 
 
 
-        public List<RequestApprove> RequestApproveList { get; set; }
+        public List<PanelInvolvementModel> PanelInvolvementList { get; set; }
+
     }
 }

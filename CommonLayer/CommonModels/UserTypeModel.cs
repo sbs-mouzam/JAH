@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class Zone
+    public partial class UserTypeModel
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public DateTime? CreatedDate { get; set; }
+        public bool? Status { get; set; }
 
-        public List<Zone> ZoneList { get; set; }
-
+        public List<UserTypeModel> UserTypeList { get; set; }
 
     }
 }

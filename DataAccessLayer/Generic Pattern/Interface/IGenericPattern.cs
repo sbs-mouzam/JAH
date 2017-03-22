@@ -12,7 +12,7 @@ namespace DataAccessLayer.Generic_Pattern.Interface
         IEnumerable<T> GetAll();
         IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
         T Insert(T entity);
-        void Delete(int id);
+        //void Delete(int id);
         T GetById(int id);
         void Update(T entity);
         List<T> GetMultipleTablesDataById(string SQLQuery);

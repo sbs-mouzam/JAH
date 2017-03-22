@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class MadarsaLandRequest
+    public partial class MasjidRenovationRequestModel
     {
         public int Id { get; set; }
 
@@ -14,29 +14,29 @@ namespace CommonLayer.CommonModels
 
         public int? UserId { get; set; }
 
-        public string UserName{ get; set; }
+        public string UserName { get; set; }
 
 
         public string Location { get; set; }
 
         public string Area { get; set; }
 
-        public int? MadarsaId { get; set; }
+        public int? MasjidId { get; set; }
 
-        public string MadarsaName { get; set; }
+        public string MasjidName{ get; set; }
 
 
-        public string TimePeriod { get; set; }
+        public string ConstructionCost { get; set; }
 
-        public decimal? AmountPaid { get; set; }
+        public string ExistingFloors { get; set; }
 
         public decimal? AmountNeeded { get; set; }
 
-        public string LandArea { get; set; }
+        public string Engineer { get; set; }
 
-        public decimal? LandPrice { get; set; }
+        public string Elevation { get; set; }
 
-        public string PurchasingFrom { get; set; }
+        public string Paln { get; set; }
 
         public string Doc1 { get; set; }
 
@@ -56,16 +56,11 @@ namespace CommonLayer.CommonModels
 
         public DateTime? CreatedDate { get; set; }
 
-        public int? RequestTypeId { get; set; }
+        public List <RequestSubmitModel> RequestSubmitList { get; set; }
 
-        public List<RequestSubmit> RequestSubmitList { get; set; }
+        public List <UserModel> UserList { get; set; }
 
-        public List<RequestType> RequestTypeList { get; set; }
+        public List<MasjidModel> MasjidList { get; set; }
 
-        public List<User> UserList { get; set; }
-
-        public List<Madarsa> MadarsaList { get; set; }
-
-        public List<MadarsaLandRequest> MadarsaLandRequestList { get; set; }
     }
 }

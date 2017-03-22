@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class RequestType
+    public partial class BoardTypeModel
     {
         public int Id { get; set; }
 
+        
         public string Name { get; set; }
 
         public bool? Status { get; set; }
 
-        public List<RequestType> RequestTypeList { get; set; }
+        public List<BoardTypeModel> BoardTypeList{ get; set; }
 
-        
     }
 }

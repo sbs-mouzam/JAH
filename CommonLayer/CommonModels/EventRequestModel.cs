@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class EventRequest
+    public partial class EventRequestModel
     {
         public int Id { get; set; }
 
@@ -34,12 +34,12 @@ namespace CommonLayer.CommonModels
 
         public DateTime? CreatedDate { get; set; }
 
-        public List<RequestSubmit> RequestSubmitList { get; set; }
-        public List<User> UserList { get; set; }
+        public List<RequestSubmitModel> RequestSubmitList { get; set; }
+        public List<UserModel> UserList { get; set; }
 
-        public List<EventRequest> EventRequestList { get; set; }
+        public List<EventRequestModel> EventRequestList { get; set; }
 
-        public List<EventMaster> EventMasterList { get; set; }
+        public List<EventMasterModel> EventMasterList { get; set; }
 
 }
 }

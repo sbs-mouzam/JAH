@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class BoardMember
+    public partial class BoardMemberModel
     {
         public int Id { get; set; }
 
@@ -37,8 +37,8 @@ namespace CommonLayer.CommonModels
         
         public DateTime? CreatedDate { get; set; }
         
-        public List<BoardType> BoardTypeList { get; set; }
-        public List<Role> RoleList { get; set; }
-        public List<BoardMember> BoardMemberList { get; set; }
+        public List<BoardTypeModel> BoardTypeList { get; set; }
+        public List<RoleModel> RoleList { get; set; }
+        public List<BoardMemberModel> BoardMemberList { get; set; }
     }
 }

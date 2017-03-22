@@ -30,12 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonLayer">
-      <HintPath>..\CommonLayer\bin\Debug\CommonLayer.dll</HintPath>
-    </Reference>
-    <Reference Include="DataAccessLayer">
-      <HintPath>..\DataAccessLayer\bin\Debug\DataAccessLayer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,7 +44,16 @@
     <Compile Include="Interface\IMasjidBs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLayer\CommonLayer.csproj">
+      <Project>{ccb025f0-6390-4f7c-b380-25de5d723acf}</Project>
+      <Name>CommonLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{bc773f02-f033-41b6-941f-12e3f9307610}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

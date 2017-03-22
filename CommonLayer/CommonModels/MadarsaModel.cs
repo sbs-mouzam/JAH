@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class Madarsa
+    public partial class MadarsaModel
     {
 
         public int Id { get; set; }
@@ -32,10 +32,10 @@ namespace CommonLayer.CommonModels
         public DateTime? CreatedDate { get; set; }
 
 
-        public List<Halqa> HalqaList { get; set; }
-        public List<User> UserList { get; set; }
+        public List<HalqaModel> HalqaList { get; set; }
+        public List<UserModel> UserList { get; set; }
 
-        public List<Madarsa> MadarsaList { get; set; }
+        public List<MadarsaModel> MadarsaList { get; set; }
 
 
     }

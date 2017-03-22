@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class User
+    public partial class UserModel
     {
         public int Id { get; set; }
 
@@ -28,10 +28,10 @@ namespace CommonLayer.CommonModels
 
         public DateTime? CreatedDate { get; set; }
 
-        public List<Role> RoleList { get; set; }
+        public List<RoleModel> RoleList { get; set; }
 
-        public List <User> UserList { get; set; }
-        public List <UserType> UserTypeList { get; set; }
+        public List <UserModel> UserList { get; set; }
+        public List <UserTypeModel> UserTypeList { get; set; }
 
     }
 }

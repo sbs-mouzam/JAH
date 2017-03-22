@@ -24,12 +24,12 @@ namespace DataAccessLayer.Generic_Pattern.Implementation
             IEnumerable<T> query = db.Set<T>().Where(predicate);
             return query;
         }
-        public void Delete(int id)
-        {
-            var ID = db.Set<T>().Find(id);
-            db.Set<T>().Remove(ID);
-            db.SaveChanges();
-        }
+        //public void Delete(int id)
+        //{
+        //    var ID = db.Set<T>().Find(id);
+        //    db.Set<T>().Remove(ID);
+        //    db.SaveChanges();
+        //}
         public IEnumerable<T> GetAll()
         {
             return db.Set<T>().ToList();

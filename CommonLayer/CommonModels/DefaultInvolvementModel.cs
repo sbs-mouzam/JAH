@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class DefaultInvolvement
+    public partial class DefaultInvolvementModel
     {
 
         public int Id { get; set; }
@@ -18,9 +18,9 @@ namespace CommonLayer.CommonModels
         public DateTime CreatedDate { get; set; }
 
 
-        public List<RequestType> RequestTypeList { get; set; }
-        public List<UserType> UserTypeList { get; set; }
+        public List<RequestTypeModel> RequestTypeList { get; set; }
+        public List<UserTypeModel> UserTypeList { get; set; }
         
-        public List<DefaultInvolvement> DefaultInvolvementList { get; set; }
+        public List<DefaultInvolvementModel> DefaultInvolvementList { get; set; }
     }
 }

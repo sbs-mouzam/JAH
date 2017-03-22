@@ -6,33 +6,32 @@ using System.Threading.Tasks;
 
 namespace CommonLayer.CommonModels
 {
-    public partial class RequestLike
+    public partial class RequestApproveModel
     {
 
         public int Id { get; set; }
-        
+
         public int? RequestSubmitId { get; set; }
 
         public int? UserId { get; set; }
 
-        public string UserName { get; set; }
+        public string userName { get; set; }
+
 
         public int? UserTypeId { get; set; }
 
-        public bool IsLike { get; set; }
+        public bool IsApproved { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
-        public List<User> UserList { get; set; }
-        public List<UserType> UserTypeList { get; set; }
 
-        public List<RequestSubmit> RequestSubmitList { get; set; }
+        public List<UserModel> UserList { get; set; }
+        public List<UserTypeModel> UserTypeList { get; set; }
 
-
-
-        public List<RequestLike> RequestLikeList { get; set; }
+        public List<RequestSubmitModel> RequestSubmitList { get; set; }
 
 
 
+        public List<RequestApproveModel> RequestApproveList { get; set; }
     }
 }
