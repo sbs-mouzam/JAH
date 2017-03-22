@@ -84,6 +84,8 @@ namespace DataAccessLayer.DataModel
 
         public int? RequestType { get; set; }
 
+        public virtual Madarsa Madarsa { get; set; }
+
         public virtual RequestSubmit RequestSubmit { get; set; }
 
         public virtual RequestType RequestType1 { get; set; }

@@ -9,29 +9,47 @@ namespace DataAccessLayer.DataModel
     [Table("Masjid")]
     public partial class Masjid
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Masjid()
+        {
+            MasjidConstructionRequests = new HashSet<MasjidConstructionRequest>();
+            MasjidExtensionRequests = new HashSet<MasjidExtensionRequest>();
+            MasjidLandRequests = new HashSet<MasjidLandRequest>();
+            MasjidRenovationRequests = new HashSet<MasjidRenovationRequest>();
+        }
+
         public int Id { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }
 
         [StringLength(50)]
-        public string Area { get; set; }
+        public string Location { get; set; }
 
-        public int? HalqaId { get; set; }
+        public int? HeadUserId { get; set; }
+
+        public int? ZoneId { get; set; }
 
         [StringLength(50)]
-        public string Latitude { get; set; }
-
-        [StringLength(50)]
-        public string Longitude { get; set; }
-
-        public int? UserIdHead { get; set; }
+        public string Mobile { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
 
-        public virtual Halqa Halqa { get; set; }
+        public int? CreatedBy { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual Zone Zone { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MasjidConstructionRequest> MasjidConstructionRequests { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MasjidExtensionRequest> MasjidExtensionRequests { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MasjidLandRequest> MasjidLandRequests { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MasjidRenovationRequest> MasjidRenovationRequests { get; set; }
     }
 }

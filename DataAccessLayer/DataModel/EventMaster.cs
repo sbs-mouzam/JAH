@@ -6,13 +6,13 @@ namespace DataAccessLayer.DataModel
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Role")]
-    public partial class Role
+    [Table("EventMaster")]
+    public partial class EventMaster
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Role()
+        public EventMaster()
         {
-            Users = new HashSet<User>();
+            EventRequests = new HashSet<EventRequest>();
         }
 
         public int Id { get; set; }
@@ -20,10 +20,7 @@ namespace DataAccessLayer.DataModel
         [StringLength(50)]
         public string Name { get; set; }
 
-        [StringLength(50)]
-        public string CreatedDate { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<EventRequest> EventRequests { get; set; }
     }
 }

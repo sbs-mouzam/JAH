@@ -66,6 +66,8 @@ namespace DataAccessLayer.DataModel
 
         public int? RequestTypeId { get; set; }
 
+        public virtual Masjid Masjid { get; set; }
+
         public virtual RequestSubmit RequestSubmit { get; set; }
 
         public virtual RequestType RequestType { get; set; }

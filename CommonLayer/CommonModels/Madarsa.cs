@@ -17,11 +17,17 @@ namespace CommonLayer.CommonModels
 
         public int? HalqaId { get; set; }
 
+        public string HalqaName { get; set; }
+
+
         public string Latitude { get; set; }
 
         public string Longitude { get; set; }
 
         public int? UserIdHead { get; set; }
+
+        public string HeadUserName { get; set; }
+
 
         public DateTime? CreatedDate { get; set; }
 

@@ -32,9 +32,17 @@ namespace DataAccessLayer.DataModel
 
         public int? RequestSubmitId { get; set; }
 
+        public int? RequestTypeId { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
 
+        public virtual EventMaster EventMaster { get; set; }
+
         public virtual RequestSubmit RequestSubmit { get; set; }
+
+        public virtual RequestType RequestType { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

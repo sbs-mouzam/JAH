@@ -14,11 +14,16 @@ namespace CommonLayer.CommonModels
 
         public int? UserId { get; set; }
 
+        public string UserName { get; set; }
+
         public string Location { get; set; }
 
         public string Area { get; set; }
 
         public int? MadarsaId { get; set; }
+
+        public string MadarsaName { get; set; }
+
 
         public string Girls { get; set; }
 
@@ -64,11 +69,8 @@ namespace CommonLayer.CommonModels
 
         public int? RequestType { get; set; }
 
-        public virtual RequestSubmit RequestSubmit { get; set; }
 
-        public virtual RequestType RequestType1 { get; set; }
-
-        public virtual User User { get; set; }
+        public List<Madarsa> MadarsaList { get; set; }
 
         public List<RequestSubmit> RequestSubmitList { get; set; }
         public List<RequestType> RequestTypeList { get; set; }

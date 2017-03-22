@@ -54,16 +54,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataModel\BoardMember.cs" />
-    <Compile Include="DataModel\BoardRequestProcess.cs" />
-    <Compile Include="DataModel\BoardType.cs" />
+    <Compile Include="DataModel\DefaultInovlvement.cs" />
+    <Compile Include="DataModel\EventMaster.cs" />
     <Compile Include="DataModel\EventRequest.cs" />
     <Compile Include="DataModel\EventRequestDetail.cs" />
     <Compile Include="DataModel\ExistingMadarsaOperationsRequest.cs" />
     <Compile Include="DataModel\Halqa.cs" />
     <Compile Include="DataModel\JamiatDb.cs" />
     <Compile Include="DataModel\Madarsa.cs" />
-    <Compile Include="DataModel\MadarsaConstructionRequest.cs" />
     <Compile Include="DataModel\MadarsaExtensionRequest.cs" />
     <Compile Include="DataModel\MadarsaLandRequest.cs" />
     <Compile Include="DataModel\Masjid.cs" />
@@ -72,15 +70,17 @@
     <Compile Include="DataModel\MasjidLandRequest.cs" />
     <Compile Include="DataModel\MasjidRenovationRequest.cs" />
     <Compile Include="DataModel\NewMadarsaOperationsRequest.cs" />
-    <Compile Include="DataModel\PanelMember.cs" />
-    <Compile Include="DataModel\PanelRequestProcess.cs" />
-    <Compile Include="DataModel\PanelType.cs" />
+    <Compile Include="DataModel\PanelInvolvement.cs" />
     <Compile Include="DataModel\PartialClass.cs" />
+    <Compile Include="DataModel\RequestApprove.cs" />
+    <Compile Include="DataModel\RequestComment.cs" />
+    <Compile Include="DataModel\RequestLike.cs" />
     <Compile Include="DataModel\RequestSubmit.cs" />
     <Compile Include="DataModel\RequestType.cs" />
     <Compile Include="DataModel\Role.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="DataModel\UserType.cs" />
+    <Compile Include="DataModel\Zone.cs" />
     <Compile Include="Generic Pattern\Implementation\GenericPattern.cs" />
     <Compile Include="Generic Pattern\Interface\IGenericPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -43,12 +43,12 @@
     <Compile Include="CommonModels\BoardMember.cs" />
     <Compile Include="CommonModels\BoardRequestProcess.cs" />
     <Compile Include="CommonModels\BoardType.cs" />
+    <Compile Include="CommonModels\DefaultInvolvement.cs" />
     <Compile Include="CommonModels\EventRequest.cs" />
     <Compile Include="CommonModels\EventRequestDetail.cs" />
     <Compile Include="CommonModels\ExistingMadarsaOperationsRequest.cs" />
     <Compile Include="CommonModels\Halqa.cs" />
     <Compile Include="CommonModels\Madarsa.cs" />
-    <Compile Include="CommonModels\MadarsaConstructionRequest.cs" />
     <Compile Include="CommonModels\MadarsaExtensionRequest.cs" />
     <Compile Include="CommonModels\MadarsaLandRequest.cs" />
     <Compile Include="CommonModels\Masjid.cs" />
@@ -57,14 +57,17 @@
     <Compile Include="CommonModels\MasjidLandRequest.cs" />
     <Compile Include="CommonModels\MasjidRenovationRequest.cs" />
     <Compile Include="CommonModels\NewMadarsaOperationsRequest.cs" />
-    <Compile Include="CommonModels\PanelMember.cs" />
-    <Compile Include="CommonModels\PanelRequestProcess.cs" />
-    <Compile Include="CommonModels\PanelType.cs" />
+    <Compile Include="CommonModels\PanelInvolvement.cs" />
+    <Compile Include="CommonModels\RequestApprove.cs" />
+    <Compile Include="CommonModels\RequestComment.cs" />
+    <Compile Include="CommonModels\RequestLike.cs" />
     <Compile Include="CommonModels\RequestSubmit.cs" />
     <Compile Include="CommonModels\RequestType.cs" />
     <Compile Include="CommonModels\Role.cs" />
     <Compile Include="CommonModels\User.cs" />
     <Compile Include="CommonModels\UserType.cs" />
+    <Compile Include="CommonModels\Zone.cs" />
+    <Compile Include="EventMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

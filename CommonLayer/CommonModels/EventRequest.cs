@@ -20,19 +20,26 @@ namespace CommonLayer.CommonModels
 
         public int? EventType { get; set; }
 
+
         public string Venu { get; set; }
 
         public DateTime? Date { get; set; }
 
         public int? UserId { get; set; }
 
+        public string UserName { get; set; }
+
+
         public int? RequestSubmitId { get; set; }
 
         public DateTime? CreatedDate { get; set; }
 
         public List<RequestSubmit> RequestSubmitList { get; set; }
+        public List<User> UserList { get; set; }
 
         public List<EventRequest> EventRequestList { get; set; }
+
+        public List<EventMaster> EventMasterList { get; set; }
 
 }
 }

@@ -32,5 +32,6 @@ namespace CommonLayer.CommonModels
 
         public List <User> UserList { get; set; }
         public List <UserType> UserTypeList { get; set; }
+
     }
 }

@@ -12,17 +12,21 @@ namespace DataAccessLayer.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
+            EventRequests = new HashSet<EventRequest>();
             ExistingMadarsaOperationsRequests = new HashSet<ExistingMadarsaOperationsRequest>();
             Madarsas = new HashSet<Madarsa>();
-            MadarsaConstructionRequests = new HashSet<MadarsaConstructionRequest>();
             MadarsaExtensionRequests = new HashSet<MadarsaExtensionRequest>();
             MadarsaLandRequests = new HashSet<MadarsaLandRequest>();
-            Masjids = new HashSet<Masjid>();
             MasjidConstructionRequests = new HashSet<MasjidConstructionRequest>();
             MasjidExtensionRequests = new HashSet<MasjidExtensionRequest>();
             MasjidLandRequests = new HashSet<MasjidLandRequest>();
             MasjidRenovationRequests = new HashSet<MasjidRenovationRequest>();
             NewMadarsaOperationsRequests = new HashSet<NewMadarsaOperationsRequest>();
+            PanelInvolvements = new HashSet<PanelInvolvement>();
+            RequestApproves = new HashSet<RequestApprove>();
+            RequestComments = new HashSet<RequestComment>();
+            RequestLikes = new HashSet<RequestLike>();
+            RequestSubmits = new HashSet<RequestSubmit>();
         }
 
         public int Id { get; set; }
@@ -39,8 +43,6 @@ namespace DataAccessLayer.DataModel
         [StringLength(50)]
         public string Area { get; set; }
 
-        public int? UserTypeId { get; set; }
-
         [StringLength(50)]
         public string UserName { get; set; }
 
@@ -49,8 +51,13 @@ namespace DataAccessLayer.DataModel
 
         public int? RoleId { get; set; }
 
+        public int? UserTypeId { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EventRequest> EventRequests { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExistingMadarsaOperationsRequest> ExistingMadarsaOperationsRequests { get; set; }
@@ -59,16 +66,10 @@ namespace DataAccessLayer.DataModel
         public virtual ICollection<Madarsa> Madarsas { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MadarsaConstructionRequest> MadarsaConstructionRequests { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MadarsaExtensionRequest> MadarsaExtensionRequests { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MadarsaLandRequest> MadarsaLandRequests { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Masjid> Masjids { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MasjidConstructionRequest> MasjidConstructionRequests { get; set; }
@@ -84,6 +85,23 @@ namespace DataAccessLayer.DataModel
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NewMadarsaOperationsRequest> NewMadarsaOperationsRequests { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PanelInvolvement> PanelInvolvements { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RequestApprove> RequestApproves { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RequestComment> RequestComments { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RequestLike> RequestLikes { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RequestSubmit> RequestSubmits { get; set; }
+
+        public virtual Role Role { get; set; }
 
         public virtual UserType UserType { get; set; }
     }

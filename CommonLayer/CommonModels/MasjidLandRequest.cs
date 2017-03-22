@@ -14,11 +14,15 @@ namespace CommonLayer.CommonModels
 
         public int? UserId { get; set; }
 
+        public string UserName { get; set; }
+        
         public string Location { get; set; }
 
         public string Area { get; set; }
 
         public int? MasjidId { get; set; }
+
+        public string MasjidName{ get; set; }
 
         public string TimePeriod { get; set; }
 
@@ -56,6 +60,8 @@ namespace CommonLayer.CommonModels
 
         public List<RequestType> RequestTypeList { get; set; }
 
+        public List<Masjid> MasjidList { get; set; }
+        
         public List <User> UserList { get; set; }
     }
 }

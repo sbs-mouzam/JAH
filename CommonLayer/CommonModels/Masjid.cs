@@ -12,24 +12,27 @@ namespace CommonLayer.CommonModels
 
         public string Name { get; set; }
 
-        public string Area { get; set; }
+        public string Location { get; set; }
 
-        public int? HalqaId { get; set; }
+        public int? HeadUserId { get; set; }
 
-        public string Latitude { get; set; }
+        public string HeadUserName { get; set; }
 
-        public string Longitude { get; set; }
+        public int? ZoneId { get; set; }
 
-        public int? UserIdHead { get; set; }
+        public string ZoneName { get; set; }
 
+
+        public string Mobile { get; set; }
+            
         public DateTime? CreatedDate { get; set; }
 
-        
+        public int? CreatedBy { get; set; }
+
 
         public List<Masjid> MasjidList { get; set; }
-        public List<Halqa> HalqaList { get; set; }
         public List<User> UserList { get; set; }
-
+        public List<Zone> ZoneList { get; set; }
 
     }
 }

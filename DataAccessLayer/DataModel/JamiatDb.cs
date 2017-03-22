@@ -12,15 +12,13 @@ namespace DataAccessLayer.DataModel
         {
         }
 
-        public virtual DbSet<BoardMember> BoardMembers { get; set; }
-        public virtual DbSet<BoardRequestProcess> BoardRequestProcesses { get; set; }
-        public virtual DbSet<BoardType> BoardTypes { get; set; }
+        public virtual DbSet<DefaultInovlvement> DefaultInovlvements { get; set; }
+        public virtual DbSet<EventMaster> EventMasters { get; set; }
         public virtual DbSet<EventRequest> EventRequests { get; set; }
         public virtual DbSet<EventRequestDetail> EventRequestDetails { get; set; }
         public virtual DbSet<ExistingMadarsaOperationsRequest> ExistingMadarsaOperationsRequests { get; set; }
         public virtual DbSet<Halqa> Halqas { get; set; }
         public virtual DbSet<Madarsa> Madarsas { get; set; }
-        public virtual DbSet<MadarsaConstructionRequest> MadarsaConstructionRequests { get; set; }
         public virtual DbSet<MadarsaExtensionRequest> MadarsaExtensionRequests { get; set; }
         public virtual DbSet<MadarsaLandRequest> MadarsaLandRequests { get; set; }
         public virtual DbSet<Masjid> Masjids { get; set; }
@@ -29,57 +27,27 @@ namespace DataAccessLayer.DataModel
         public virtual DbSet<MasjidLandRequest> MasjidLandRequests { get; set; }
         public virtual DbSet<MasjidRenovationRequest> MasjidRenovationRequests { get; set; }
         public virtual DbSet<NewMadarsaOperationsRequest> NewMadarsaOperationsRequests { get; set; }
-        public virtual DbSet<PanelMember> PanelMembers { get; set; }
-        public virtual DbSet<PanelRequestProcess> PanelRequestProcesses { get; set; }
-        public virtual DbSet<PanelType> PanelTypes { get; set; }
+        public virtual DbSet<PanelInvolvement> PanelInvolvements { get; set; }
+        public virtual DbSet<RequestApprove> RequestApproves { get; set; }
+        public virtual DbSet<RequestComment> RequestComments { get; set; }
+        public virtual DbSet<RequestLike> RequestLikes { get; set; }
         public virtual DbSet<RequestSubmit> RequestSubmits { get; set; }
         public virtual DbSet<RequestType> RequestTypes { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
+        public virtual DbSet<Zone> Zones { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BoardMember>()
+            modelBuilder.Entity<EventMaster>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BoardMember>()
-                .Property(e => e.Email)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardMember>()
-                .Property(e => e.Contact)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardMember>()
-                .Property(e => e.Area)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardMember>()
-                .Property(e => e.UserName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardMember>()
-                .Property(e => e.Password)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardRequestProcess>()
-                .Property(e => e.Comment)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardRequestProcess>()
-                .Property(e => e.Status)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BoardRequestProcess>()
-                .HasMany(e => e.PanelRequestProcesses)
-                .WithOptional(e => e.BoardRequestProcess)
-                .HasForeignKey(e => e.BoardMemberId);
-
-            modelBuilder.Entity<BoardType>()
-                .Property(e => e.Name)
-                .IsUnicode(false);
+            modelBuilder.Entity<EventMaster>()
+                .HasMany(e => e.EventRequests)
+                .WithOptional(e => e.EventMaster)
+                .HasForeignKey(e => e.EventType);
 
             modelBuilder.Entity<EventRequest>()
                 .Property(e => e.EventName)
@@ -186,75 +154,11 @@ namespace DataAccessLayer.DataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Madarsa>()
-                .Property(e => e.Area)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Madarsa>()
-                .Property(e => e.Latitude)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Madarsa>()
-                .Property(e => e.Longitude)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.ShortDescription)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
                 .Property(e => e.Location)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Area)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.ConstructionCost)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.ExistingFloors)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.AmountNeeded)
-                .HasPrecision(18, 0);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Engineer)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Elevation)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Paln)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Doc1)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Doc2)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Doc3)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Pic1)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Pic2)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaConstructionRequest>()
-                .Property(e => e.Pic3)
+            modelBuilder.Entity<Madarsa>()
+                .Property(e => e.Mobile)
                 .IsUnicode(false);
 
             modelBuilder.Entity<MadarsaExtensionRequest>()
@@ -316,10 +220,6 @@ namespace DataAccessLayer.DataModel
             modelBuilder.Entity<MadarsaExtensionRequest>()
                 .Property(e => e.Pic3)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<MadarsaExtensionRequest>()
-                .HasOptional(e => e.MadarsaExtensionRequest1)
-                .WithRequired(e => e.MadarsaExtensionRequest2);
 
             modelBuilder.Entity<MadarsaLandRequest>()
                 .Property(e => e.ShortDescription)
@@ -386,15 +286,11 @@ namespace DataAccessLayer.DataModel
                 .IsUnicode(false);
 
             modelBuilder.Entity<Masjid>()
-                .Property(e => e.Area)
+                .Property(e => e.Location)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Masjid>()
-                .Property(e => e.Latitude)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Masjid>()
-                .Property(e => e.Longitude)
+                .Property(e => e.Mobile)
                 .IsUnicode(false);
 
             modelBuilder.Entity<MasjidConstructionRequest>()
@@ -717,40 +613,12 @@ namespace DataAccessLayer.DataModel
                 .Property(e => e.Pic3)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<PanelMember>()
-                .Property(e => e.Name)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelMember>()
-                .Property(e => e.Email)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelMember>()
-                .Property(e => e.Contact)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelMember>()
-                .Property(e => e.Area)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelMember>()
-                .Property(e => e.UserName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelMember>()
-                .Property(e => e.Password)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelRequestProcess>()
+            modelBuilder.Entity<RequestComment>()
                 .Property(e => e.Comment)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<PanelRequestProcess>()
-                .Property(e => e.Status)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<PanelType>()
-                .Property(e => e.Name)
+            modelBuilder.Entity<RequestSubmit>()
+                .Property(e => e.ShortDesc)
                 .IsUnicode(false);
 
             modelBuilder.Entity<RequestSubmit>()
@@ -772,6 +640,10 @@ namespace DataAccessLayer.DataModel
 
             modelBuilder.Entity<Role>()
                 .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Role>()
+                .Property(e => e.CreatedDate)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
@@ -801,15 +673,18 @@ namespace DataAccessLayer.DataModel
             modelBuilder.Entity<User>()
                 .HasMany(e => e.Madarsas)
                 .WithOptional(e => e.User)
-                .HasForeignKey(e => e.UserIdHead);
-
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.Masjids)
-                .WithOptional(e => e.User)
-                .HasForeignKey(e => e.UserIdHead);
+                .HasForeignKey(e => e.HeadUserId);
 
             modelBuilder.Entity<UserType>()
                 .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Zone>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Zone>()
+                .Property(e => e.CreatedDate)
                 .IsUnicode(false);
         }
     }

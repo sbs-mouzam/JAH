@@ -22,7 +22,7 @@ namespace DataAccessLayer.DataModel
         [StringLength(50)]
         public string Area { get; set; }
 
-        public int? MasjidId { get; set; }
+        public int? MadarsaId { get; set; }
 
         [StringLength(50)]
         public string ConstructionCost { get; set; }
@@ -68,12 +68,12 @@ namespace DataAccessLayer.DataModel
 
         public int? RequestTypeId { get; set; }
 
-        public virtual MadarsaExtensionRequest MadarsaExtensionRequest1 { get; set; }
+        public virtual Madarsa Madarsa { get; set; }
 
-        public virtual MadarsaExtensionRequest MadarsaExtensionRequest2 { get; set; }
-
-        public virtual User User { get; set; }
+        public virtual RequestSubmit RequestSubmit { get; set; }
 
         public virtual RequestType RequestType { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

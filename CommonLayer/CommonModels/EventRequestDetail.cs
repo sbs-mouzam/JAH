@@ -12,6 +12,9 @@ namespace CommonLayer.CommonModels
 
         public int? EventRequestId { get; set; }
 
+        public string EventName { get; set; }
+
+
         public string SpeakerName { get; set; }
 
         public DateTime? Date { get; set; }
@@ -21,6 +24,7 @@ namespace CommonLayer.CommonModels
         public DateTime? CreatedDate { get; set; }
 
         public List<EventRequestDetail> EventRequestDetailList { get; set; }
+
 
         public List<EventRequest> EventRequestList { get; set; }
     }

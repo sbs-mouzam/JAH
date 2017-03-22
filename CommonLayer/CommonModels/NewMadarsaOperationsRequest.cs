@@ -14,11 +14,15 @@ namespace CommonLayer.CommonModels
 
         public int? UserId { get; set; }
 
+        public string UserName { get; set; }
+
         public string Location { get; set; }
 
         public string Area { get; set; }
 
         public int? MadarsaId { get; set; }
+
+        public string MadarsaName { get; set; }
 
         public string ExpectedStudents { get; set; }
 
@@ -71,6 +75,9 @@ namespace CommonLayer.CommonModels
         public List <RequestType> RequestTypeList { get; set; }
 
         public List<User> UserList { get; set; }
+
+        public List<Madarsa> MadarsaList { get; set; }
+
 
         public List<NewMadarsaOperationsRequest> NewMadarsaOperationsRequestList { get; set; }
         

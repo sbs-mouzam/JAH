@@ -63,10 +63,16 @@ namespace DataAccessLayer.DataModel
 
         public bool? Status { get; set; }
 
+        public int? RequestTypeId { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
 
+        public virtual Masjid Masjid { get; set; }
+
         public virtual RequestSubmit RequestSubmit { get; set; }
+
+        public virtual RequestType RequestType { get; set; }
 
         public virtual User User { get; set; }
     }
